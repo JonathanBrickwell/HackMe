@@ -21,6 +21,10 @@ body {
 .disabled {
   display: none; }
 
+#userInput {
+  width: 100%;
+  box-shadow: none; }
+
 .card-signin {
   border: 0;
   border-radius: 1rem;

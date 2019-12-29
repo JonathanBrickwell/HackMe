@@ -14,24 +14,28 @@ function StartTheGame() {
 }
 
 function DisplayNextQuestion() {
-    questionText.innerHTML = questionsModel[currentAnswerIndex].question;
-}
-
-function IsCorrectAnswer() { 
-    if(quizDataModel) {
-        if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
-            console.log("True!");
-            currentAnswerIndex++;
-            ResetUserInput();
-        } else {
-            console.log("False!");
-        }
-    }
+    var html = "";
+    html += currentAnswerIndex + 1 + ". Question " + "<br>";
+    html +=  questionsModel[currentAnswerIndex].question;
+    questionText.innerHTML = html;
 }
 
 function ResetUserInput() {
     userInputField.value = "";
 }
+
+function IsCorrectAnswer() { 
+    if(quizDataModel) {
+        if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
+            currentAnswerIndex++;
+            ResetUserInput();
+            DisplayNextQuestion();
+        } else {
+            userInputField.style.borderColor = "red";
+        }
+    }
+}
+
 
 
 
