@@ -10,10 +10,6 @@ function QuizComponent(quizData) {
     var score = 0;
 }
 
-if(!production) {
-    console.log("Ovo je komponenta: ", quizData);
-}
-
 function ResetUserInput() {
     return userInput = "";
 }
