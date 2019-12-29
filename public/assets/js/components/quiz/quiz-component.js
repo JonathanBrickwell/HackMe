@@ -1,38 +1,40 @@
+const userInputField = document.getElementById("userInput");
+const questionText = document.getElementById("question");
 
-let userInput = "";
-let userInputField = document.getElementById("userInput");
+const startTheGameWrapper = document.getElementById('start');
+const quizGameWrapper = document.getElementById('quiz');
 
+let currentAnswerIndex = 0;
 
-function QuizComponent(quizData) {
-    this.quizData = quizData;
-    var highScore = 0;
-    var currentAnswerIndex = 0;
-    var score = 0;
-}
-
-if(!production) {
-    console.log("Ovo je komponenta: ", quizData);
-}
-
-function ResetUserInput() {
-    return userInput = "";
-}
-
-function GetUserInput() {
-    userInput = userInputField.value;
-    return userInput;
-}
-
-function CheckCorrectAnswer() {      
-     
+function StartTheGame() {
+    startTheGameWrapper.classList.add('disabled');
+    quizGameWrapper.classList.remove('disabled');
+    ResetUserInput();
+    DisplayNextQuestion();
 }
 
 function DisplayNextQuestion() {
-
+    questionText.innerHTML = questionsModel[currentAnswerIndex].question;
 }
 
-function Init() {
-    console.log(QuizComponent());
+function IsCorrectAnswer() { 
+    if(quizDataModel) {
+        if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
+            console.log("True!");
+            currentAnswerIndex++;
+            ResetUserInput();
+        } else {
+            console.log("False!");
+        }
+    }
 }
+
+function ResetUserInput() {
+    userInputField.value = "";
+}
+
+
+
+
 
 

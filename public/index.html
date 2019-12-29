@@ -6,6 +6,7 @@
     <title>This.hack()</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.6.0/firebase-app.js"></script>
@@ -22,9 +23,15 @@
   <body>
     
     <main>
-      <div id="root">
+
+      <div id="start">
+        <button onclick="StartTheGame()" id="startBtn" type="button" class="btn btn-dark">Submit</button>
+      </div>
+
+      <div id="quiz" class="mainQuizWrapper disabled">
+        <p id="question"></p>
         <input type="text" id="userInput">
-        <button onclick="Init()" type="button" class="btn btn-dark">Submit</button on>
+        <button onclick="IsCorrectAnswer()" type="button" class="btn btn-dark">Submit</button>
       </div>
 
     </main>
@@ -46,6 +53,7 @@
 
     <!-- Models -->
     <script src="assets/js/models/quiz-answers-model.js"></script>
+    <script src="assets/js/models/quiz-questions-model.js"></script>
 
     <!-- Components -->
     <script src="assets/js/components/quiz/quiz-component.js"></script>
