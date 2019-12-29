@@ -1,1 +1,7 @@
-@import 'components/start';
+@import 'abstracts/variables';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'components/buttons';
+@import 'layout/navigation';
+@import 'pages/quiz';
+@import 'pages/start';
