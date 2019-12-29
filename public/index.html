@@ -25,12 +25,13 @@
     <main>
 
       <div id="start">
-        <button id="startBtn" type="button" class="btn btn-dark">Submit</button>
+        <button onclick="StartTheGame()" id="startBtn" type="button" class="btn btn-dark">Submit</button>
       </div>
 
       <div id="quiz" class="mainQuizWrapper disabled">
-        <p>Ušli smo u igru!</p>
         <p id="question"></p>
+        <input type="text" id="userInput">
+        <button onclick="IsCorrectAnswer()" type="button" class="btn btn-dark">Submit</button>
       </div>
 
     </main>

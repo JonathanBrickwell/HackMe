@@ -4,22 +4,12 @@ const questionText = document.getElementById("question");
 const startTheGameWrapper = document.getElementById('start');
 const quizGameWrapper = document.getElementById('quiz');
 
-const startButton = document.getElementById('startBtn');
-startButton.addEventListener("click", startTheGame);
+let currentAnswerIndex = 0;
 
-var currentAnswerIndex = 0;
-
-function QuizComponent(quizData) {
-    this.quizData = quizData;
-    var highScore = 0;
-    var userInput = " ";
-    var score = 0;
-}
-
-function startTheGame() {
-    console.log("Started!");
+function StartTheGame() {
     startTheGameWrapper.classList.add('disabled');
     quizGameWrapper.classList.remove('disabled');
+    ResetUserInput();
     DisplayNextQuestion();
 }
 
@@ -27,18 +17,22 @@ function DisplayNextQuestion() {
     questionText.innerHTML = questionsModel[currentAnswerIndex].question;
 }
 
+function IsCorrectAnswer() { 
+    if(quizDataModel) {
+        if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
+            console.log("True!");
+            currentAnswerIndex++;
+            ResetUserInput();
+        } else {
+            console.log("False!");
+        }
+    }
+}
+
 function ResetUserInput() {
-    return userInput = "";
+    userInputField.value = "";
 }
 
-function GetUserInput() {
-    userInput = userInputField.value;
-    return userInput;
-}
-
-function CheckCorrectAnswer() {      
-     
-}
 
 
 
