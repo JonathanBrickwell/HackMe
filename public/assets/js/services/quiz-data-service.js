@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     myQuizData.onSnapshot(doc => {
         const data = doc.data();
+        QuizComponent(data);
         quizDataModel.push(new QuizDataModel(data));
+
+        if(!production) {
+            console.log("Ovo je output iz servisa: ", quizDataModel);
+        }
     });
 });
