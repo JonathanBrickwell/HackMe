@@ -1,9 +1,13 @@
+/* Get Input Fields and Texts elements */
 const userInputField = document.getElementById("userInput");
 const questionText = document.getElementById("question");
 
+/* Get Quiz Game Wrappers */
 const startTheGameWrapper = document.getElementById('start');
 const quizGameWrapper = document.getElementById('quiz');
+const endScreenWrapper = document.getElementById('endgame');
 
+/* Iterators */
 let currentAnswerIndex = 0;
 let currentQuestionIndex = 1;
 
@@ -12,6 +16,14 @@ function StartTheGame() {
     quizGameWrapper.classList.remove('disabled');
     ResetUserInput();
     DisplayNextQuestion();
+}
+
+function Endgame() {
+    let quizDataModelSize = Object.keys(quizDataModel[0].answer).length;
+    if(currentAnswerIndex === quizDataModelSize) {
+        quizGameWrapper.classList.add('disabled');
+        endScreenWrapper.classList.remove('disabled');
+    }
 }
 
 function DisplayNextQuestion() {
@@ -31,6 +43,7 @@ function IsCorrectAnswer() {
         if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
             currentAnswerIndex++;
             currentQuestionIndex++;
+            Endgame();
             ResetUserInput();
             DisplayNextQuestion();
         } else {
