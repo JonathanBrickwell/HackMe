@@ -5,6 +5,7 @@ const startTheGameWrapper = document.getElementById('start');
 const quizGameWrapper = document.getElementById('quiz');
 
 let currentAnswerIndex = 0;
+let currentQuestionIndex = 1;
 
 function StartTheGame() {
     startTheGameWrapper.classList.add('disabled');
@@ -15,19 +16,21 @@ function StartTheGame() {
 
 function DisplayNextQuestion() {
     var html = "";
-    html += currentAnswerIndex + 1 + ". Question " + "<br>";
+    html += "<h3 class='font-weight-bold'>" + currentQuestionIndex + ". Question " + "</h3>";
     html +=  questionsModel[currentAnswerIndex].question;
     questionText.innerHTML = html;
 }
 
 function ResetUserInput() {
     userInputField.value = "";
+    userInputField.style.borderColor = "transparent";
 }
 
 function IsCorrectAnswer() { 
     if(quizDataModel) {
         if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
             currentAnswerIndex++;
+            currentQuestionIndex++;
             ResetUserInput();
             DisplayNextQuestion();
         } else {
