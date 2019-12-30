@@ -39,16 +39,20 @@ function ResetUserInput() {
 }
 
 function IsCorrectAnswer() { 
+    if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
+        currentAnswerIndex++;
+        currentQuestionIndex++;
+    } else {
+        userInputField.style.borderColor = "red";
+    }
+}
+
+function Submit() {
     if(quizDataModel) {
-        if(userInputField.value === quizDataModel[0].answer[currentAnswerIndex]) {
-            currentAnswerIndex++;
-            currentQuestionIndex++;
-            Endgame();
-            ResetUserInput();
-            DisplayNextQuestion();
-        } else {
-            userInputField.style.borderColor = "red";
-        }
+        IsCorrectAnswer();
+        Endgame();
+        ResetUserInput();
+        DisplayNextQuestion();
     }
 }
 
