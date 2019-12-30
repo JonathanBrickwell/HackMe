@@ -51,12 +51,9 @@
               <div class="card card-signin my-5">
                 <div class="card-body">
                   <h3 class="card-title text-center">Welcome to Hack This App</h3>
-               
                   <h6 class="text-center">Welcome to the quiz which will test your knowledge of <b>password encryption</b>, <b>browser developer tools</b> and <b>web development skillsets.</b></h6>
                   <h6 class="text-center pb-2">Each question has a hint. <br> <b>Read them twice</b> if necessary. <br> Sometimes, the answer is <b>right in front</b> of you.</h6>
-
                   <button onclick="StartTheGame()" id="startBtn" type="button" class="btn btn-dark">Start The Quiz</button>
-                
                 </div>
               </div>
             </div>
@@ -70,12 +67,9 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
               <div class="card card-signin my-5">
                 <div class="card-body">
-                  <h3 id="question" class="card-title text-center"></h3>
-
-                  <input type="text" id="userInput" placeholder="Your answer" required autofocus>
-               
+                  <div id="question" class="card-title text-center"></div>
+                  <input type="text" id="userInput" placeholder="Enter the password" required autofocus>
                   <button onclick="IsCorrectAnswer()" type="button" class="btn btn-dark mt-3">Submit</button>
-                
                 </div>
               </div>
             </div>
