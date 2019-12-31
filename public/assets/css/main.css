@@ -4,10 +4,17 @@
 
 body {
   background: #0B0C08;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-x: hidden; }
 
 .text-light {
   color: white; }
+
+a:hover {
+  color: #dcca27 !important; }
+
+.inline-anchor {
+  color: #dcca27 !important; }
 
 .btn-google {
   color: white;
@@ -20,6 +27,9 @@ body {
 .btn-dark {
   width: 100%;
   background-color: #0B0C08; }
+
+button {
+  border-radius: 0px !important; }
 
 #menuToggle {
   display: block;
@@ -34,9 +44,6 @@ body {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease; }
-
-#menuToggle a:hover {
-  color: tomato; }
 
 #menuToggle input {
   display: block;
