@@ -44,7 +44,6 @@
     
     <nav role="navigation">
       <div id="menuToggle">
-
         <input type="checkbox" />
         
         <span></span>
@@ -52,8 +51,8 @@
         <span></span>
         
         <ul id="menu">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
+          <a href="index.html"><li>Home</li></a>
+          <a href="about.html"><li>About</li></a>
           <a href="#"><li>Login</li></a>
           <a href="#"><li>Contact</li></a>
           <a href="https://github.com/JonathanBrickwell/HackMe" target="_blank">
@@ -73,10 +72,44 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
               <div class="card card-signin my-5">
                 <div class="card-body">
+
                   <h3 class="card-title text-center">Welcome to Hack This Quiz</h3>
+
                   <h6 class="text-center">Welcome to the quiz which will test your knowledge of <b>password encryption</b>, <b>browser developer tools</b> and <b>web development skillsets.</b></h6>
                   <h6 class="text-center pb-2">Each question has a hint. <br> <b>Read them twice</b> if necessary. <br> Sometimes, the answer is <b>right in front</b> of you.</h6>
+
                   <button onclick="StartTheGame()" id="startBtn" type="button" class="btn btn-dark">Start The Quiz</button>
+                  <button id="startBtn" type="button" class="btn btn-dark mt-3" data-toggle="modal" data-target="#exampleModal">How To Play</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">How to play</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p><b>Hack This Quiz</b> is a pretty basic application.</p>
+                          <p>All you have to know is:</p>
+                          <ol>
+                            <li><b>Read the question</b> presented to you thoroughly.</li>
+                            <li>If you need an extra hand, <b>observe the hint</b>.</li>
+                            <li>Use any means neccessary to <b>find the answer</b>.</li>
+                            <li>If you know the answer, <b>type it in the input field</b>.</li>
+                            <li><b>Press the submit button</b> to move on.</li>
+                          </ol>
+                          <p>Remember, <b>the answer is</b> usually hidden <b>right in front you</b>.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

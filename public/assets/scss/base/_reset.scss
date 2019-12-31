@@ -6,8 +6,17 @@
   body {
     background: $background;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
   }
 
 .text-light {
   color: white;
+}
+
+a:hover {
+  color:$anchor !important;
+}
+
+.inline-anchor {
+  color:$anchor !important;
 }
