@@ -40,17 +40,3 @@ function googleLogout() {
         console.log("There has been an error: ", error);
       });      
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    function isLoggedIn() {
-        firebase.auth().onAuthStateChanged(function(user) {
-            if(!user) {
-                firebase.auth().signOut();
-            } else {
-                console.log("User is still logged in.");
-                successfulLogin(user);
-            }
-        });
-    }
-    isLoggedIn();
-});

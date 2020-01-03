@@ -59,6 +59,9 @@ button {
 .logout {
   display: none; }
 
+#loader {
+  display: block; }
+
 #userInput {
   width: 100%;
   box-shadow: none; }

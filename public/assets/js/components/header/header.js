@@ -29,7 +29,7 @@ var header = (function() {
         html += '</button>';
 
         html += '<div class="logged-in">';
-        html += '<span class="text-small text-white pr-2" id="username">Hello, Kristijan Fištrek</span>';
+        html += '<span class="text-small text-white pr-2" id="username"></span>';
         html += '<img class="img-fluid profile-picture" src="" alt="Logged In User Profile Picture" />';
         html += '</div>';
 
