@@ -4,7 +4,6 @@
   }
 
 html, body {
-  overflow: hidden;
   height: 100%;
 }
 
@@ -14,9 +13,9 @@ main, #start, .container, .row {
 
 body {
   height: inherit;
+  overflow-x: hidden;
   background: $background;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  overflow-x: hidden;
 }
 
 .text-light {

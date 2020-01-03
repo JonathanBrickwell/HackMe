@@ -1,0 +1,21 @@
+.logged-in {
+    display: none;
+    align-items: center;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.logged-in img {
+    height: 48px;
+    width: 48px;
+    border-radius: 30px;
+}
+
+.logout {
+    display: none;
+}
+
+#loader {
+    display: none;
+}
