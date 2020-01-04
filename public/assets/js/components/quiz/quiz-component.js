@@ -23,7 +23,7 @@ function Endgame() {
     let quizDataModelSize = Object.keys(quizDataModel[0].answer).length;
     if(currentAnswerIndex === quizDataModelSize) {
         quizGameWrapper.classList.add('disabled');
-        endScreenWrapper.classList.remove('disabled');
+        endgameComponent.init();
     }
 }
 
