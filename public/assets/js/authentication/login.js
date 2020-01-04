@@ -1,7 +1,12 @@
 let userName = document.getElementById('username');
+
 let loggedInNavbar = document.querySelector('.logged-in');
 let profilePicture = document.querySelector('.profile-picture');
 let logoutBtn = document.querySelector('.logout');
+
+let dropdownProfilePicture = document.querySelector('.dropdown-profile-picture');
+let dropdownUsername = document.querySelector('.dropdown-username');
+let dropdownEmail = document.querySelector('.dropdown-email');
 
 function googleLogin() {
 
@@ -25,6 +30,10 @@ function successfulLogin(userID) {
         logoutBtn.style.display = "block";
         profilePicture.src = userID.photoURL;
         userName.innerHTML = "Hello, " + userID.displayName;
+
+        dropdownProfilePicture.src = userID.photoURL;
+        dropdownUsername.innerHTML = userID.displayName;
+        dropdownEmail.innerHTML = userID.email;
     } else {
         console.log("User is logged out.");
     }

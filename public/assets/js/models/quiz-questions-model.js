@@ -10,6 +10,9 @@ var questionsModel = [
     },
     {
         question: "This time the password is hidden within this page." + "<br>" + "<p class='small'><b>Hint</b>: <i>I am revealed when inspected.</i>" + "<!-- <span>Password: w-12..---</span>--></p>"
+    },
+    {
+        question: "The admin is more careful now. He stores the passwords within a database.js file." + "<p class='small'><b>Hint: </b><i>Even though he ensured they're encrypted, he didn't invest enough time to hide the file...</i></p>"
     }
 ]
 

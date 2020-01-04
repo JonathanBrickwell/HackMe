@@ -10,6 +10,7 @@ const endScreenWrapper = document.getElementById('endgame');
 /* Iterators */
 let currentAnswerIndex = 0;
 let currentQuestionIndex = 1;
+let score = 0;
 
 function StartTheGame() {
     startTheGameWrapper.classList.add('disabled');

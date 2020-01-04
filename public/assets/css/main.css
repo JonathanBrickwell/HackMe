@@ -23,6 +23,9 @@ a:hover {
 .inline-anchor {
   color: #dcca27 !important; }
 
+.dropdown-toggle::after {
+  display: none; }
+
 .btn-google {
   color: white;
   background-color: #ea4335; }
@@ -40,6 +43,14 @@ a:hover {
 
 button {
   border-radius: 0px !important; }
+
+.dropdown-menu {
+  text-align: center;
+  padding: 20px; }
+
+.dropdown-menu p {
+  margin-top: .5rem !important;
+  margin-bottom: .5rem !important; }
 
 .disabled {
   display: none; }
@@ -60,7 +71,7 @@ button {
   display: none; }
 
 #loader {
-  display: block; }
+  display: none; }
 
 #userInput {
   width: 100%;

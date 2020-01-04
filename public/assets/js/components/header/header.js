@@ -29,8 +29,21 @@ var header = (function() {
         html += '</button>';
 
         html += '<div class="logged-in">';
-        html += '<span class="text-small text-white pr-2" id="username"></span>';
+        html += '<span class="text-small text-white pr-3" id="username"></span>';
+
+        html += '<div class="dropdown show">';
+        html += '<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'
         html += '<img class="img-fluid profile-picture" src="" alt="Logged In User Profile Picture" />';
+        html += '</a>';
+        html += '<div class="dropdown-menu dropdown-menu-right align-center" aria-labelledby="dropdownMenuLink">';
+        html += '<img class="img-fluid dropdown-profile-picture" src="" alt="Dropdown Profile Picture" />';
+        html += '<p class="text-small font-weight-bold dropdown-username"></p>';
+        html += '<p class="text-small dropdown-email"></p>';
+        html += '<p class="text-small dropdown-email"></p>';
+        html += '</div>';
+        html += '</div>';
+
+        html += '<span class="text-small text-white pr-2" id="loader">Loading your profile...</span>';
         html += '</div>';
 
         html += '</nav>';
